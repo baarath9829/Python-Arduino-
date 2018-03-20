@@ -24,24 +24,24 @@ while True:
         if(readData == '0'):break #if no brake end the loop
 
        # cal. difference in distance                    
-    for dis in distance:
-        index = distance.index(dis)
-        print 'index is : ' ,index 
-        if index < len(distance):
-            nextdis = distance[index+1]
-            dif =  dis - nextdis 
+    for i in range(len(distance)):
+        #index = distance.index(dis)
+        #print 'index is : ' ,index 
+        if i < len(distance):
+            #nextdis = distance[index+1]
+            dif =  distance[i] - distance[i+1] 
             #print dis
             print 'difference in distance',dif
             displacement.append(dif) #putting displacement into a list 
 
        # cal. difference in time     
-    for sec in microsec:
+    for i in range(len(microsec)):
         #print sec
-        index = microsec.index(sec)
-        print 'index is : ' ,index
-        if index < len(microsec):
-            nextvalue = microsec[index+1]
-            timediff =  sec - nextvalue
+        #index = microsec.index(sec)
+        #print 'index is : ' ,index
+        if i < len(microsec):
+            #nextvalue = microsec[index+1]
+            timediff =  microsec[i] - microsec[i+1]
             timediff = round(timediff,2)
             print 'difference is: ', abs(timediff)
             timetaken.append(timediff)# putting time difference into a list 
@@ -53,13 +53,13 @@ while True:
         velocity.append(speed)
         
 
-    for vel in velocity:
+    for i in range(len(velocity)):
         #print vel
-        index = velocity.index(vel)
-        print 'index is : ' ,index
-        if index < len(velocity):
-            nextvel = velocity[index+1]
-            retardingspeed =  vel - nextvel
+        #index = velocity.index(vel)
+        #print 'index is : ' ,index
+        if i < len(velocity):
+            #nextvel = velocity[index+1]
+            retardingspeed =  velocity[i] - velocity[i+1]
             print 'retarding speed is: ', retardingspeed
             retardingvelocity.append(retardingspeed)# putting retarding speed into a list
 
