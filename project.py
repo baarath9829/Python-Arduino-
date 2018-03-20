@@ -24,23 +24,16 @@ while True:
         if(readData == '0'):break #if no brake end the loop
 
        # cal. difference in distance                    
-    for i in range(len(distance)):
-        #index = distance.index(dis)
-        #print 'index is : ' ,index 
+    for i in range(len(distance)-1): 
         if i < len(distance):
-            #nextdis = distance[index+1]
+            print 'index is : ',i,'next index is ',i+1
             dif =  distance[i] - distance[i+1] 
-            #print dis
             print 'difference in distance',dif
             displacement.append(dif) #putting displacement into a list 
 
        # cal. difference in time     
-    for i in range(len(microsec)):
-        #print sec
-        #index = microsec.index(sec)
-        #print 'index is : ' ,index
+    for i in range(len(microsec)-1):
         if i < len(microsec):
-            #nextvalue = microsec[index+1]
             timediff =  microsec[i] - microsec[i+1]
             timediff = round(timediff,2)
             print 'difference is: ', abs(timediff)
@@ -53,12 +46,8 @@ while True:
         velocity.append(speed)
         
 
-    for i in range(len(velocity)):
-        #print vel
-        #index = velocity.index(vel)
-        #print 'index is : ' ,index
+    for i in range(len(velocity)-1):
         if i < len(velocity):
-            #nextvel = velocity[index+1]
             retardingspeed =  velocity[i] - velocity[i+1]
             print 'retarding speed is: ', retardingspeed
             retardingvelocity.append(retardingspeed)# putting retarding speed into a list
